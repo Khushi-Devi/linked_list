@@ -15,3 +15,17 @@ At each step, you add the digits plus carry, create a new node, and prepend it t
 This problem is unusual because you’re not given the head of the list, only the node to delete. The trick is to overwrite the current node’s value with the next node’s value, then bypass the next node by adjusting the pointer.
 
 This works because the node to delete is guaranteed not to be the tail. The solution runs in constant time and space, and is a classic interview test of understanding how linked list nodes can be manipulated directly.
+
+# 2(Add Two Numbers)
+This problem asks you to add two numbers represented as linked lists, where digits are stored in reverse order. The trick is to simulate addition digit by digit, just like on paper.
+
+You use a dummy node to simplify list construction. At each step, add the digits from both lists plus any carry. Create a new node with the result’s last digit, and update the carry. Continue until both lists are exhausted and no carry remains.
+
+This approach runs in linear time relative to the length of the lists and uses only O(1) extra space beyond the output list. It’s a fundamental linked list problem that tests understanding of pointer manipulation and arithmetic logic.
+
+# 2816(Double a Number Represented as a Linked List)
+The problem asks you to double the integer represented by a linked list of digits. Since digits are stored in forward order, you can’t process from least significant digit directly.
+
+The trick is to reverse the list first. Then, traverse from least significant digit, double each value, and handle carry propagation. If a carry remains after the last node, append a new node. Finally, reverse the list back to restore the original order.
+
+This approach runs in linear time and constant extra space, and is interview‑friendly because it avoids auxiliary structures like arrays or stacks.
