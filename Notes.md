@@ -41,3 +41,17 @@ This approach runs in linear time and constant extra space, and is interview‑f
 This problem asks you to merge two sorted linked lists into one sorted list. The clean way is to use a dummy node and a pointer (ptr) to build the result. At each step, compare the current nodes of both lists, attach the smaller one, and advance. When one list is exhausted, attach the remainder of the other.
 
 This version creates new nodes for the merged list, so space complexity is O(m+n). An optimized variant reuses the existing nodes, which reduces space to O(1). Both are valid, but the in‑place reuse is more efficient and interview‑friendly.
+
+# 141(Linkedlist Cycle)
+
+This problem asks whether a linked list contains a cycle. The elegant solution is Floyd’s Cycle Detection algorithm (also called Tortoise & Hare).
+
+Slow pointer moves one step at a time.
+
+Fast pointer moves two steps at a time.
+
+If there’s a cycle, they will eventually meet inside the loop.
+
+If there’s no cycle, the fast pointer will reach null safely.
+
+This runs in linear time and constant space, making it one of the most efficient cycle detection techniques.
