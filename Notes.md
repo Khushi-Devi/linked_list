@@ -98,3 +98,15 @@ When fast reaches the end, slow will be at the middle.
 If the list has an even number of nodes, this method returns the second middle node, which matches the problem’s requirement.
 
 This runs in linear time and constant space, making it one of the most efficient and interview‑friendly techniques.
+
+# 1290 ( Convert Binary Number in a Linked List to Integer)
+
+This problem asks you to convert a binary number stored in a linked list into its decimal value. The trick is to traverse the list and build the integer step by step:
+
+Start with num = 0.
+
+For each node, multiply num by 2 (left shift) and add the current digit.
+
+Continue until the end of the list.
+
+This runs in O(n) time and O(1) space. It’s a neat example of how linked list traversal can simulate binary number conversion.
