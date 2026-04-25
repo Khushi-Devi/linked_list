@@ -110,3 +110,13 @@ For each node, multiply num by 2 (left shift) and add the current digit.
 Continue until the end of the list.
 
 This runs in O(n) time and O(1) space. It’s a neat example of how linked list traversal can simulate binary number conversion.
+
+# 234 (Palindrome Linked List ) 
+
+This problem asks you to check if a linked list is a palindrome.
+
+ArrayList approach (O(n) space): Copy all values into an array, then compare from both ends inward.
+
+Optimal approach (O(1) space): Use fast/slow pointers to find the middle, reverse the second half, and compare node by node.
+
+The ArrayList method is simple and intuitive, while the reverse‑second‑half method is more efficient and interview‑friendly.
