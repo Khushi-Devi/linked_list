@@ -85,3 +85,16 @@ Otherwise, move forward.
 Continue until the end.
 
 This runs in linear time and constant space. Using a dummy node makes the code concise and avoids edge‑case bugs.
+
+# 876 (Middle of the Linked List)
+This problem asks you to return the middle node of a linked list. The elegant solution uses two pointers:
+
+Slow pointer moves one step at a time.
+
+Fast pointer moves two steps at a time.
+
+When fast reaches the end, slow will be at the middle.
+
+If the list has an even number of nodes, this method returns the second middle node, which matches the problem’s requirement.
+
+This runs in linear time and constant space, making it one of the most efficient and interview‑friendly techniques.
