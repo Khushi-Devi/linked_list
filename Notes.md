@@ -71,3 +71,17 @@ If there’s an intersection, they will meet at that node.
 If not, both will reach null at the same time.
 
 This solution runs in linear time and constant space, and is considered the interview‑safe O(n) / O(1) approach.
+
+# 203 (Remove Linked List Elements) 
+
+This problem asks you to remove all nodes with a given value. The clean trick is to use a dummy node pointing to the head, so you don’t need special handling when the head itself must be removed.
+
+Traverse with a pointer (ptr).
+
+If ptr.next.val == target, bypass that node.
+
+Otherwise, move forward.
+
+Continue until the end.
+
+This runs in linear time and constant space. Using a dummy node makes the code concise and avoids edge‑case bugs.
