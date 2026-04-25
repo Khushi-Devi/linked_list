@@ -55,3 +55,19 @@ If there’s a cycle, they will eventually meet inside the loop.
 If there’s no cycle, the fast pointer will reach null safely.
 
 This runs in linear time and constant space, making it one of the most efficient cycle detection techniques.
+
+# 160 (Intersection of Two Linked Lists) 
+
+This problem asks you to find the node where two singly linked lists intersect. The elegant trick is to traverse both lists with two pointers.
+
+Start ptr1 at headA and ptr2 at headB.
+
+When a pointer reaches the end of its list, redirect it to the other list’s head.
+
+Both pointers traverse exactly lenA + lenB.
+
+If there’s an intersection, they will meet at that node.
+
+If not, both will reach null at the same time.
+
+This solution runs in linear time and constant space, and is considered the interview‑safe O(n) / O(1) approach.
