@@ -120,3 +120,15 @@ ArrayList approach (O(n) space): Copy all values into an array, then compare fro
 Optimal approach (O(1) space): Use fast/slow pointers to find the middle, reverse the second half, and compare node by node.
 
 The ArrayList method is simple and intuitive, while the reverse‑second‑half method is more efficient and interview‑friendly.
+
+# 61 (Rotate List)
+
+This problem asks you to rotate a linked list to the right by k places.
+
+First compute the length of the list.
+
+Normalize k using k % length (rotating by length returns the same list).
+
+Find the new tail at position (length - k - 1).
+
+Break the list at that point, set the next node as the new head, and connect the old tail to the old head.
