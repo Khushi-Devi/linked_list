@@ -132,3 +132,16 @@ Normalize k using k % length (rotating by length returns the same list).
 Find the new tail at position (length - k - 1).
 
 Break the list at that point, set the next node as the new head, and connect the old tail to the old head.
+
+# 86 (Partition List)
+Difficulty: Medium | Tags: linked-list, two-pointers
+
+This problem asks you to reorder a linked list so that all nodes with values less than x come before nodes with values greater than or equal to x.
+
+Use two dummy nodes to build two separate lists.
+
+Traverse the original list, attaching each node to the correct list.
+
+Connect the two lists at the end.
+
+Return the head of the left list.
