@@ -134,7 +134,6 @@ Find the new tail at position (length - k - 1).
 Break the list at that point, set the next node as the new head, and connect the old tail to the old head.
 
 # 86 (Partition List)
-Difficulty: Medium | Tags: linked-list, two-pointers
 
 This problem asks you to reorder a linked list so that all nodes with values less than x come before nodes with values greater than or equal to x.
 
@@ -145,3 +144,19 @@ Traverse the original list, attaching each node to the correct list.
 Connect the two lists at the end.
 
 Return the head of the left list.
+
+# 82 (Remove Duplicates from Sorted List II)  
+
+This problem asks you to remove all nodes that have duplicate numbers, leaving only distinct values.
+
+Use a dummy node to simplify edge cases.
+
+Traverse the list with two pointers.
+
+If duplicates are detected, skip all nodes with that value.
+
+Otherwise, move forward.
+
+Return the new head from dummy.next.
+
+This runs in O(n) time and O(1) space. It’s a classic linked list problem that tests careful pointer manipulation and handling of duplicate sequences.
