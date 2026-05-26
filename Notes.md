@@ -8,7 +8,7 @@ A linked list only knows how to go forward. Reversing it means teaching every no
 
 In a linked list you don't delete a node — you just stop pointing to it. Setting curr.next = curr.next.next reaches past the unwanted node and it's effectively gone. This works cleanly here because the list is sorted, so duplicates always sit adjacent. On an unsorted list you'd need extra memory to track what you've already seen.
 
-# 445(Add Teo Numbers II)
+# 445(Add Two Numbers II)
 
 This problem extends the classic “Add Two Numbers” but digits are stored in forward order. To handle this, you use stacks to reverse the order of digits. By pushing all digits into stacks, you can pop them to process from least significant to most significant.
 
