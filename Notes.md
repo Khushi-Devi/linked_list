@@ -160,3 +160,14 @@ Otherwise, move forward.
 Return the new head from dummy.next.
 
 This runs in O(n) time and O(1) space. It’s a classic linked list problem that tests careful pointer manipulation and handling of duplicate sequences.
+
+# 328 (Odd Even Linked List)  
+This problem asks you to group all nodes at odd indices together followed by nodes at even indices.
+
+Maintain two chains: one for odd nodes and one for even nodes.
+
+Traverse the list, rewiring pointers so odds link to odds and evens link to evens.
+
+Finally, connect the odd chain to the even chain.
+
+This runs in O(n) time and O(1) space. It’s a classic pointer manipulation problem that tests careful handling of multiple chains.
