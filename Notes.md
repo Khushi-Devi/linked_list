@@ -171,3 +171,17 @@ Traverse the list, rewiring pointers so odds link to odds and evens link to even
 Finally, connect the odd chain to the even chain.
 
 This runs in O(n) time and O(1) space. It’s a classic pointer manipulation problem that tests careful handling of multiple chains.
+
+# 92 (Reverse Linked List II) 
+
+This problem asks you to reverse a portion of a linked list between positions left and right.
+
+Use a dummy node to handle edge cases.
+
+Traverse to the node before left.
+
+Reverse the sublist using the standard pointer reversal technique.
+
+Reconnect the reversed sublist back into the main list.
+
+This runs in O(n) time and O(1) space. It’s a classic pointer manipulation problem that tests careful handling of sublist boundaries.
