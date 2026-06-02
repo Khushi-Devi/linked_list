@@ -7,32 +7,43 @@
 
 // --- Approach: Dummy Node + Sublist Reversal ---
 // Time: O(n) | Space: O(1)
-// 1. Use a dummy node to simplify edge cases (like reversing from head).
-// 2. Traverse to node before 'left' (prev).
-// 3. Reverse the sublist between left and right using standard reversal.
-// 4. Reconnect prev to new head of sublist, and tail of sublist to remaining list.
-
+// 1. Use a dummy node to simplify edge cases.
+// 2. Traverse to node before 'left' (fj).
+// 3. Reverse the sublist between left and right.
+// 4. Reconnect fj to new head of sublist, and lj (original left node) to remainder.
 class Solution {
     public ListNode reverseBetween(ListNode head, int left, int right) {
         if (head == null || left == right) return head;
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        ListNode prev = dummy;
-        for (int i = 1; i < left; i++) {
-            prev = prev.next;
-        }
-        ListNode curr = prev.next;
-        ListNode next = null;
-        ListNode prevSub = null;
 
-        for (int i = 0; i <= right - left; i++) {
-            next = curr.next;
-            curr.next = prevSub;
-            prevSub = curr;
-            curr = next;
+        // Step 1: Dummy node setup
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        ListNode prev = null;
+        ListNode curr = dummy;
+
+        // Step 2: Move to node before 'left'
+        for (int i = 0; i < left; i++) {
+            prev = curr;
+            curr = curr.next;
         }
-        prev.next.next = curr;
-        prev.next = prevSub;
+
+        // fj = node before sublist, lj = first node of sublist
+        ListNode fj = prev;
+        ListNode lj = curr;
+
+        // Step 3: Reverse sublist
+        prev = null;
+        for (int i = 1; i <= right - left + 1; i++) {
+            ListNode temp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = temp;
+        }
+
+        // Step 4: Reconnect
+        lj.next = curr;   // tail of reversed sublist points to remainder
+        fj.next = prev;   // node before sublist points to new head
+
         return dummy.next;
     }
 }

@@ -178,10 +178,10 @@ This problem asks you to reverse a portion of a linked list between positions le
 
 Use a dummy node to handle edge cases.
 
-Traverse to the node before left.
+Traverse to the node before left (fj).
 
-Reverse the sublist using the standard pointer reversal technique.
+Reverse the sublist using standard pointer reversal.
 
-Reconnect the reversed sublist back into the main list.
+Reconnect fj to the new head of the sublist, and lj (original left node) to the remainder.
 
 This runs in O(n) time and O(1) space. It’s a classic pointer manipulation problem that tests careful handling of sublist boundaries.
